@@ -1,0 +1,17 @@
+
+__ listado_inmuebles_comuna_orm __
+Loft de Diseño Industrial, Loft con diseño industrial - comuna: Pucón
+
+ __ listado_inmuebles_comuna_sql __
+Casa Rústica, Casa de campo con chimenea - comuna: San Felipe
+
+__ listado_inmuebles_region_orm __
+Apartamento Elegante, Apartamento con acabados de lujo - region: De Valparaíso
+Apartamento Minimalista, Apartamento con diseño minimalista - region: De Valparaíso
+Casa Familiar, Amplia casa para toda la familia - region: De Valparaíso
+Estudio Acogedor, Estudio ideal para solteros - region: De Valparaíso
+Penthouse con Vistas, Penthouse con terraza panorámica - region: De Valparaíso
+Casa Rústica, Casa de campo con chimenea - region: De Valparaíso
+
+ __ listado_inmuebles_region_sql __
+Apartamento Chic, Apartamento con estilo chic - region: De La Araucanía
