@@ -42,8 +42,10 @@ def indexView(request):
 
 #* FILTROS - SERVICES - SEARCH
 
-def buscar_por_nombre(request):
-    pass
+def buscar_por_nombre(search_value, inmuebles_list):
+    filtered_inmuebles = [inmueble for inmueble in inmuebles_list if search_value.lower() in inmueble.nombre.lower()]
+    print('in search')
+    return filtered_inmuebles
 #! Estas van a ser funciones (services)
 #* x REGION y x COMUNA
 def filtros_combinados(inmuebles, region='todas', comuna='todas'):
@@ -81,6 +83,12 @@ def index_arrendatario(request):
     #     comuna = 'todas'
         
     inmuebles = filtros_combinados(inmuebles, region, comuna)
+    
+    #* SEARCH 
+    search_value = request.POST.get('search', '') if request.method == 'POST' else ''
+    print(f'search_value -> {search_value}')
+    if search_value:
+        inmuebles = buscar_por_nombre(search_value, inmuebles)
     
     
     return render(request,'arrendatario/index_arrendatario.html',{'inmuebles':inmuebles, 'comunas':comunas, 'selected_comuna': comuna, 'regiones':regiones, 'selected_region': region} )
