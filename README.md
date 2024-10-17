@@ -52,9 +52,14 @@ DINGDONG es una plataforma para arrendar inmuebles. Existen dos tipos de usuario
 4. Configura las variables de entorno en un archivo `.env` (opcional):
 
    ```env
+   ENGINE=django.db.backends.postgresql
+   NAME=mysite
+   USER=postgres
+   PASSWORD=1234
+   PORT=5432
+   HOST=localhost
    DEBUG=True
-   SECRET_KEY=your_secret_key
-   DATABASE_URL=sqlite:///db.sqlite3
+   TEST_ENV= test-.env
    ```
 
 5. Realiza las migraciones de la base de datos:
